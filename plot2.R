@@ -11,7 +11,7 @@ rm(dataRaw)
 datetime <- paste(as.Date(data$Date), data$Time)
 data$Datetime <- as.POSIXct(datetime)
 
-## Plotting line graph
+## Plotting line graph and saving as plot2.png
 plot(data$Global_active_power~data$Datetime, type="l",
      ylab="Global Active Power (kilowatts)", xlab="")
 dev.copy(png, file="plot2.png", height=480, width=480)
